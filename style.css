@@ -86,7 +86,7 @@
   footer {
     grid-area: footer;
     background-color: var(--orange-color);
-    color: #fff;
+    color: #ffffff;
     padding: 10px 20px;
     border: 10px solid var(--primary-color);
     button {
