@@ -1,0 +1,123 @@
+:root {
+    --primary-color: rgb(236, 236, 236);
+    --secondary-color: rgb(21, 21, 21);
+    --blue-color: #2bc5cd;
+    --orange-color: #ff693d;
+    --border: 2px solid var(--blue-color);
+    --spacing: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Resto del CSS */
+
+  body {
+    display: grid;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 10px solid var(--primary-color);
+    grid-template-columns: repeat(3, minmax(235px, 1fr));
+    grid-template-rows: repeat(3, minmax(235px, 1fr));
+    grid-template-areas: 
+    "training school student"
+    "training education time"
+    "alumni footer footer";  
+    h1 {
+        font-size: 21px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    h2 {
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    h3 {
+        font-size: 15px;
+    }
+  }
+  
+  header {
+    grid-area: training;
+    display: grid;
+    padding: 20px;
+    border: 10px solid var(--primary-color);
+    color: #ffffff;
+    background-color: var(--blue-color);
+  }
+
+  .school {
+    grid-area: school;
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+    border: 10px solid var(--primary-color);
+  }
+  
+  .student {
+    grid-area: student;
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+    border: 10px solid var(--primary-color);
+  }
+  
+  main {
+    grid-area: education;
+    color: var(--blue-color);
+    border: 10px solid var(--primary-color);
+    h2 {
+        margin: 0px;
+        align-content: center;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--blue-color);
+    }
+  }
+
+  .time {
+    grid-area: time;
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+    border: 10px solid var(--primary-color);
+  }
+  
+  .alumni {
+    grid-area: alumni;
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+    border: 10px solid var(--primary-color);
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: var(--orange-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: 10px solid var(--primary-color);
+    button {
+        border: none;
+        padding: 15px 40px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+    }
+  }
+  
+  .alumni,
+  .school,
+  .student,
+  .time {
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media screen and (max-width: 726px) {
+    body {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: 
+    "training"
+    "training"
+    "school"
+    "student"
+    "education"
+    "time"
+    "alumni"
+    "footer";  
+    }
+  }
